@@ -15,6 +15,12 @@ module.exports = {
         query: {
           presets: ['env', 'react']
         }
+      },
+      {
+        test: /\.scss$/,
+        exclude: /(node_modules)/,
+        include: path.join(__dirname, 'src'),
+        loader: ['style-loader', 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]', 'sass-loader']
       }
     ]
   }
