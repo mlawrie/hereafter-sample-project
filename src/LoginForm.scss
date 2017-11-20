@@ -1,4 +1,9 @@
+$rhythm: 18px;
+
 .container {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: $rhythm;
+  line-height: $rhythm * 2;
   background: #ddd;
   padding: 20px;
   width: 600px;
@@ -6,6 +11,33 @@
 }
 
 .heading {
+  margin: 0;
   font-weight: bold;
+  font-size: $rhythm * 2;
+  line-height: $rhythm * 3;
   color: #00aef0;
+}
+
+.label {
+  color: #333;
+  line-height: $rhythm 1.5;
+  margin: 0 $rhythm/2;
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70%;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 3px;
+  line-height: $rhythm * 1.5;
+  box-sizing: border-box;
+  padding: 0 $rhythm/2;
+  color: #666;
+  display: block;
 }

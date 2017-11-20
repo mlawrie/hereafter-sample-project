@@ -4,7 +4,7 @@ const app = express();
 
 app.use('/', express.static(path.join(__dirname, 'build')));
 
-app.get('/', (req, res) => res.send(`
+const indexTemplate = `
   <!DOCTYPE html>
   <html>
   <head>
@@ -14,10 +14,11 @@ app.get('/', (req, res) => res.send(`
     <div id="app"></div>
     <script type="text/javascript" src="bundle.js"></script>
   </body>
-  </html>
-`));
+  </html>`;
+const port = 8080;
+
+app.get('/', (req, res) => res.send(indexTemplate));
 
 app.get('/login', (req, res) => res.send('post'));
 
-const port = 8080;
 app.listen(port, () => console.log(`hereafter-sample-project listening on ${port}`));
